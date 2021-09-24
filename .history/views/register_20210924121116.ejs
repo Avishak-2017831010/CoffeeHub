@@ -1,0 +1,121 @@
+<% include partials/header %>
+<!-- <h1>Sign Up!</h1>
+
+<form action="/register" method="post">
+  <input type="text" name="username" placeholder="username">
+  <input type="text" name="password" placeholder="password">
+  <button>Sign Up</button>
+</form> -->
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #FFE4C4
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none
+}
+
+.box {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #876750;
+    ;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 100px
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #FFE4C4;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box input::placeholder{
+  color: #FFE4C4;
+  font-family: 'Inconsolata', monospace;
+}
+
+.box input:focus::placeholder{
+  color: transparent;
+}
+
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: #2ecc71;
+    
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    
+}
+
+.box input[type="submit"]:hover {
+    background: #2ecc71
+}
+
+.forgot {
+    text-decoration: underline
+}
+
+.text-muted{
+  color: #82ffc0;
+  font-family: 'Grechen Fuemen', cursive;
+}
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card">
+              <form class="box"  action="/register" method="post">
+                  <h1>Register Now</h1>
+                  
+                  <input type="text" name="username" placeholder="Username"> 
+                  <input type="password" name="password" placeholder="Password">                    
+                  <input type="submit" name="SignUp" value="SignUp">                
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<% include partials/footer %>

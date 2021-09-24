@@ -1,0 +1,75 @@
+<% include ../partials/header %>
+<% include ./style.ejs %>
+
+  
+
+
+  <div class="container-fluid" style="background:url('https://i.ibb.co/yX4ZSKS/jakub-dziubak-Xt-Ud5-Si-X464-unsplash.jpg');background-position-x: center; background-position-y:center;">
+    
+    
+    
+    <header class="jumbotron" style="margin: 10px; background: transparent; align-items: center;">
+      
+      <div class="container">
+        <h1 style=
+        "color: #59453E; font-family: 'Grechen Fuemen', cursive;">Welcome To 
+        <span 
+        style="color: #ffe4c4; 
+        margin-left: 5px; 
+        font-weight: bold;  
+        "
+        
+        
+        > CoffeeHub</span></h1>
+        <h3 style="font-size: 20px; font-family: 'Grechen Fuemen', cursive; margin: 20px 0;">Get in touch with excellence</h3>
+        <p>
+          <a class="btn bg-transparent bg-outline-primary addnew" href="/coffeeshops/new" style="margin: 10px -10px; font-size: 20px; font-family: 'Inconsolata', monospace; color: #874d33;">Add shop Now</a>
+        </p>
+      </div>  
+    </header>
+
+    
+
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+      <% coffeeshops.forEach(function(coffeeshop){ %>
+        <!-- <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img src="<%= coffeeshop.image %>">
+            <div class="caption">
+              <h4><%= coffeeshop.name %></h4>
+            </div>
+            <p>
+              <a href="/coffeeshops/<%= coffeeshop._id %>" class="btn btn-primary">More Info</a>
+            </p>
+          </div>
+        </div> -->
+
+        <div class="card col-md-2 col-sm-">
+          <div class="bg-image hover-overlay ripple thumbnail" data-mdb-ripple-color="light">
+            <img
+              src="<%= coffeeshop.image %>"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body caption">
+            <h4 class="card-title"><%= coffeeshop.name %></h4>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the
+              card's content.
+            </p>
+            <a href="/coffeeshops/<%= coffeeshop._id %>" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+
+        
+
+
+      <% }); %>
+    </div>
+  </div>
+
+<% include ../partials/footer %>

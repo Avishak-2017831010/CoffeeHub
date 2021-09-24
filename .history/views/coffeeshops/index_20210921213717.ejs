@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+
+
+  <div class="container" style="background:url('https://i.ibb.co/YPtDmK9/karsten-winegeart-l24e-JZ9c-IQk-unsplash.jpg');background-position-x: center; background-position-y:center;">
+    <header class="jumbotron" style="margin: 10px; background: transparent; align-items: center;">
+      
+      <div class="container"">
+        <h1 s>Welcome To CoffeeHub</h1>
+        <p>Add new shop to get in touch with excellence</p>
+        <p>
+          <a class="btn btn-primary btn-large" href="/coffeeshops/new">Add New shop</a>
+        </p>
+      </div>
+    </header>
+
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+      <% coffeeshops.forEach(function(coffeeshop){ %>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img src="<%= coffeeshop.image %>">
+            <div class="caption">
+              <h4><%= coffeeshop.name %></h4>
+            </div>
+            <p>
+              <a href="/coffeeshops/<%= coffeeshop._id %>" class="btn btn-primary">More Info</a>
+            </p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+
+<% include ../partials/footer %>
