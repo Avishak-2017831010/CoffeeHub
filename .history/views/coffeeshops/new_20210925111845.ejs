@@ -1,0 +1,62 @@
+
+
+<% include ../partials/header %>
+
+<style>
+
+  h1{
+    
+    color: #926447;
+    font-family: source-sans-pro, sans-serif;
+  }
+
+  .formStyle { 
+  background-color: #eaeaea;
+  padding: 20px; 
+  width: 400px; 
+  margin-bottom: 20px; 
+  border-bottom-width: 1px; 
+  border-bottom-style: solid; 
+  border-bottom-color: #ecf0f1; 
+  border-top-style: none; 
+  border-right-style: none; 
+  border-left-style: none; 
+  font-size: 1em;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+
+
+
+  
+
+</style>
+
+
+<div class="container-fluid" style="background: url('https://i.ibb.co/crQ4HK4/possible-2.png'); min-height: 600px; background-position-x:center; background-position-y:center ; background-size: 100% 100%;">
+  <div class="row mainForm">
+    <h1 style="text-align: center">Create a New Coffeeshop</h1>
+    <div style="width: 30%; margin: 25px auto;">
+      <form action="/coffeeshops" method="post" class="mainForm">
+        <div class="form-group">
+          <input class="form-control formStyle" type="text" name="name" placeholder="name">
+        </div>
+        <div class="form-group">
+          <input class="form-control formStyle" type="number" name="price" placeholder="price" min="20" step="20">
+        </div>
+        <div class="form-group">
+          <input class="form-control formStyle" type="text" name="image" placeholder="image url">
+        </div>
+        <div class="form-group">
+          <input class="form-control formStyle" type="text" name="description" placeholder="description">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary btn-block formButton">Submit!</button>
+        </div>
+      </form>
+      <a href="/coffeeshops">Go Back</a>
+    </div>
+  </div>
+</div>
+<% include ../partials/footer %>

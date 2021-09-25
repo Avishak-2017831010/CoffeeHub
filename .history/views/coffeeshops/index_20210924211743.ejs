@@ -1,0 +1,69 @@
+
+
+
+  
+
+
+  <div class="container-fluid" style="background:url('https://i.ibb.co/7n19pKk/possible2.png');background-position-x: center; background-position-y:center; min-height: 700px; background-size: 100% 100%; background-position-x: center; background-position-y:center ;">
+    <% include ../partials/header %>
+    
+    <style>
+      .addShop:hover{
+        sc
+      }
+    </style>
+    
+    <header class="jumbotron" style="background: transparent; align-items: center;">
+      
+      <div class="container">
+        <h1 style=
+        "color: #59453E; font-family: 'Grechen Fuemen', cursive;">Welcome To 
+        <span 
+        style="color: #874d33; 
+        margin-left: 5px; 
+        font-weight: bold;  
+        "
+        
+        
+        > CoffeeHub</span></h1>
+        <h3 style="font-size: 20px; font-family: 'Grechen Fuemen', cursive; margin: 20px 0;">Get in touch with excellence</h3>
+        <p class="addShop">
+          <a class="btn bg-transparent bg-outline-primary addnew" href="/coffeeshops/new" style="margin: 20px -10px; font-size: 25px; font-family: 'Inconsolata', monospace; color: #874d33; border: #874d33 1px solid;">Add shop Now</a>
+        </p>
+      </div>  
+    </header>
+
+  </div> 
+
+    <div class="row" >
+      <% coffeeshops.forEach(function(coffeeshop){ %>
+        <div class="card col-md-2 col-sm-4" style="margin: 20px;">
+          <div class="bg-image hover-overlay ripple thumbnail" data-mdb-ripple-color="light" style="border-radius: 10px; padding: 10px;">
+            <img
+              src="<%= coffeeshop.image %>"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body caption" style="margin: 10px;">
+            <h4 class="card-title" style="font-family: 'Inconsolata', monospace; font-weight: bold;"><%= coffeeshop.name %></h4>
+            <p class="card-text" style="font-family: 'Rubik', sans-serif;">
+              Sylhet,Bangladesh
+            </p>
+            <a href="/coffeeshops/<%= coffeeshop._id %>" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        
+
+
+        
+
+
+      <% }); %>
+    </div>
+  </div>
+
+<% include ../partials/footer %>

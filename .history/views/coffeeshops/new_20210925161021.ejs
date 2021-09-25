@@ -1,0 +1,90 @@
+
+
+<% include ../partials/header %>
+
+<style>
+
+  h1{
+    
+    color: #926447;
+    text-align: center;
+    margin-left: 25px;
+    font-family: source-sans-pro, sans-serif;
+  }
+
+  .formStyle { 
+  background-color: #eaeaea;
+  padding: 20px; 
+  width: 400px; 
+  margin-bottom: 20px; 
+  border-bottom-width: 1px; 
+  border-bottom-style: solid; 
+  border-bottom-color: #ecf0f1; 
+  border-top-style: none; 
+  border-right-style: none; 
+  border-left-style: none; 
+  font-size: 1em;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.formButton{
+  
+  float: right;
+	background-color:#ffffff;
+	display:inline-block;
+	color:#2ecc71;
+	font-size:28px;
+	font-weight: 500;
+	padding:6px 24px;
+  margin-top: 15px;
+  margin-right: 60px;
+	text-decoration:none;
+
+
+}
+
+.mainForm{
+  background:transparent;
+  text-align: center;
+}
+
+.submitbtn{
+  color: white;
+  background: #926447;
+}
+
+
+
+
+  
+
+</style>
+
+
+<div class="container-fluid" style="background: url('https://i.ibb.co/1d4jkB8/possible-3.png'); min-height: 600px; background-position-x:center; background-position-y:center ; background-size: 100% 100%;">
+  <div class="row mainForm">
+    <h1>Create a New Coffeeshop</h1>
+    <div style="width: 30%; margin: 25px auto;">
+      <form action="/coffeeshops" method="post" class="mainForm">
+        <div class="form-group">
+          <input class="form-control formStyle" type="text" name="name" placeholder="name">
+        </div>
+        <div class="form-group">
+          <input class="form-control formStyle" type="number" name="price" placeholder="price" min="20" step="20">
+        </div>
+        <div class="form-group">
+          <input class="form-control formStyle" type="text" name="image" placeholder="image url">
+        </div>
+        <div class="form-group">
+          <input class="form-control formStyle" type="text" name="description" placeholder="description">
+        </div>
+        
+          <button class="btn btn-success submitbtn">Submit!</button>
+        </div>
+      </form>
+      <a class="back" href="/coffeeshops">Go Back</a>
+    </div>
+  </div>
+</div>
+<% include ../partials/footer %>
